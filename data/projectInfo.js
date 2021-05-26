@@ -3,8 +3,8 @@ export const projectData = [
         name: "SneakerFlex",
         image:"images/SneakerFlex.png",
         info:"SneakerFlex is a fullstack sneaker ecommerce website built in Nextjs and Node using TypeScript for both the backend and frontend.",
-        tech:"typescript, nextjs, urql, Formik.",
-        techB:"typescript, node, express, graphql, postgresql, typeorm, redis",
+        tech:"Typescript, Nextjs, Urql, Tailwind, Formik",
+        techB:"Typescript, Node, Express, Graphql, Postgresql, Typeorm, Redis",
         ghLink:"https://github.com/anxietyattacked/shoe-ecomV2",
         Link:"https://sneakerflex.vercel.app/"
         
@@ -13,8 +13,8 @@ export const projectData = [
         name:"HoopyDo",
         image:"images/HoopyDo.png",
         info:"HoopyDo is an NBA statistics and chart explorer built in React and D3.",
-        tech:"React, D3, React Table",
-        ghLink:"https://github.com/anxietyattacked/NBA-Stats-Dashboard",
+        tech:"React, D3,Tailwind React Table, data from nba_api, Python, Pandas",
+        ghLink:"https://github.com/anxiety,attacked/NBA-Stats-Dashboard",
         Link:"https://naughty-neumann-fb4b06.netlify.app/"
     },
     {

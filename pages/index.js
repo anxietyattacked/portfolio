@@ -1,10 +1,19 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from "next/link"
-import {projectData} from "../data/projectInfo"
+import {useState} from "react"
+import Contact from '../components/Contact'
+import Hero from "../components/Hero"
+import Projects from '../components/Projects'
+import Sidebar from '../components/Sidebar'
+import Skills from '../components/Skills'
+
+import useWindowDimensions from "../utils/useWindowDimensions"
+
 
 
 export default function Home() {
+  const window = useWindowDimensions()
+  let [isOpen, setIsOpen] = useState(false);
+  let isMobile = (window.width <= 768)
   return (
     <div className="">
       <Head>
@@ -14,71 +23,40 @@ export default function Home() {
         <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
       </Head>
      
-      <nav className="flex md:flex-col md:fixed md:overscroll-x-none md:h-full w-full md:w-1/6 z-10 px-4 bg-gray-500">
-          
-          <Link href="/"><a className="md:text-4xl text-white">Home</a></Link>
-          <Link href="/"><a className="md:text-4xl text-white">Resume</a></Link>
-          <Link href="/"><a className="md:text-4xl text-white">Contact</a></Link>
-          <div className="flex mt-3">
-          <a href="https://www.linkedin.com/in/michael-bergerson-375036108/"><span className="iconify text-3xl mr-1" data-icon="brandico-linkedin-rect" data-inline="false"></span></a>
-          <a href="https://github.com/anxietyattacked"><span className="iconify text-3xl" data-icon="akar-icons:github-fill" data-inline="false"></span></a>
-          </div>
-        </nav>
-      <main className="md:ml-sidebar">
-    
-        <div>
-
+     {!isMobile ? <Sidebar/> : null}
+    <main className="md:ml-sidebar">
+      <div className="">
+        <Hero isMobile={isMobile} isOpen={isOpen} setIsOpen={setIsOpen}/>   
         </div>
-        <div className=" grid place-content-center px-4">
-          <h1 className="text-center font-bold text-xl mb-3">Skills</h1>
-          <div className=" grid grid-cols-1">
-          <div className="flex justify-center mb-3">
-          <span className="iconify icon-r1" data-icon="logos:typescript-icon" data-inline="false"></span>
-          <span className="iconify icon-r1" data-icon="grommet-icons:js" data-inline="false"></span>
-          <span className="iconify icon-r1" data-icon="logos:react" data-inline="false"></span>
-      
+
+        <div className="pb-20 bg-gray-100 px-8 md:px-16 py-4 grid md:grid-cols-2">
+          <h1 className="text-4xl font-bold font-varela mb-6 md:col-span-2">About</h1>
+          <div className="md:col-span-2 mb-4">
+            <p className="text-xl border-grad bg-black text-white py-8 px-16 rounded-2xl">My name is Michael Bergerson. I am a frontend web developer from Olympia, WA. I graduated from Oregon State University with a B.S. in economics. My coding journey began with python but I saw a few things like D3 that made me want to pick up javascript.  </p>
           </div>
-          <div className="mb-3">
-            <p className="text-center">typeScript, javascript, react, </p>
-          </div>
-          <div className="flex justify-center mb-3">
-          <span className="iconify icon-r1" data-icon="logos:tailwindcss-icon" data-inline="false"></span>
-          <span className="iconify icon-r1" data-icon="logos:d3" data-inline="false"></span>
-          </div>
+          <div className="md:col-span-2 grid grid-cols-3 place-content-center mt-8">
+            <h1 className="font-varela text-4xl font-bold col-span-3 mb-8">Hobbies</h1>
+            <div className="grid place-content-center">
+            <span className="iconify text-center text-4xl md:text-6xl ml-7 md:ml-4 mb-1 text-pink-400" data-icon="fa-solid:brain" data-inline="false"></span>
+            <p className="text-center">Neuroscience</p>
+            </div>
+            <div className="grid place-content-center">
+            <span className="iconify text-center text-4xl md:text-6xl ml-3 md:ml-1 text-yellow-300" data-icon="fluent:emoji-laugh-16-filled" data-inline="false"></span>
+            <p className="text-center">Comedy</p>
+            </div>
+            <div className="grid place-content-center">
+            <span className="iconify text-center text-4xl md:text-6xl text-red-500" data-icon="map:art-gallery" data-inline="false"></span>
+            <p className="text-center">Art</p>
+            </div>
+            
+           
           </div>
         </div>
-      <div className="grid gap-3 bg-gray-200 px-8">
-        <h1 className="text-center font-bold text-xl mb-3">Projects</h1>
-        {projectData.map(project => (
-            <div key={project.name} className="grid md:grid-cols-5 justify-center mb-2">
-         
-            <h2 className="text-2xl mb-2 md:col-span-5">{project.name}</h2>
-          <div className="relative overflow-hidden h-0 p3 col-span-1 md:col-span-2">
-                <img className="absolute top-0 left-0 w-full h-full" src={project.image} alt={`${project.name} screenshot`} />
-            </div>
-            <div className="md:col-span-3 grid md:grid-cols-4 place-content-center">
-            <p className="md:col-span-4 mx-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptate corrupti reiciendis sunt, corporis ipsam aut aspernatur soluta labore doloribus illum in! Iure animi nisi nemo, alias debitis tempore inventore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea libero ipsa debitis, 
-            consectetur veniam quaerat perspiciatis itaque temporibus iure pariatur fugiat, culpa neque nobis nostrum earum cupiditate, nesciunt excepturi incidunt!</p>
-            {project.name === "SneakerFlex" ? <p></p> : null}
-            <div className="md:col-span-4 flex justify-center mt-8">
-              <div className="">
-              <a className="px-3 py-2 bg-blue-600 text-white text-center font-bold text-lg mr-4" href={project.Link}>Go to website</a>
-              </div>
-              <div className="col-span-2">
-              <a className="px-3 py-2 bg-green-600 text-white text-center font-bold text-lg" href={project.ghLink}>Go to Github</a>
-              </div>
-           </div>
-           <div className="md:col-span-4 mt-3">
-             <p className="text-center"><strong>Frontend: </strong>{project.tech}</p>
-             {project.techB ? <p className="text-center"><strong>Backend: </strong>{project.techB}</p>: null}
-           </div>
-            </div>
-          </div>
-            ))}
-        
-      </div>
 
-      </main>
+       <Skills/>
+      <Projects/>
+      <Contact/>
+    </main>
 
      
     </div>
