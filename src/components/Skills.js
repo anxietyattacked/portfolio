@@ -26,7 +26,7 @@ const Skills = () => {
           <p className="md:ml-1">CSS</p>
           </div>
           <div className="">
-          <span class="iconify text-5xl md:text-6xl ml-2" data-icon="vscode-icons:file-type-tailwind" data-inline="false"></span>
+          <span className="iconify text-5xl md:text-6xl ml-2" data-icon="vscode-icons:file-type-tailwind" data-inline="false"></span>
           <p>Tailwind</p>
           </div>
           <div className="">
@@ -46,11 +46,11 @@ const Skills = () => {
           <p>Express</p>
           </div>
           <div className="">
-          <span class="iconify text-5xl md:text-6xl ml-2 md:ml-1" data-icon="logos:graphql" data-inline="false"></span>
+          <span className="iconify text-5xl md:text-6xl ml-2 md:ml-1" data-icon="logos:graphql" data-inline="false"></span>
           <p>Graphql</p>
           </div>
           <div className="">
-          <span class="iconify text-5xl md:text-6xl ml-3 md:ml-2" data-icon="logos:postgresql" data-inline="false"></span>
+          <span className="iconify text-5xl md:text-6xl ml-3 md:ml-2" data-icon="logos:postgresql" data-inline="false"></span>
           <p>Postgresql</p>
           </div>
 
