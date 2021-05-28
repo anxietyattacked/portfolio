@@ -36,6 +36,8 @@ const handleSubmit = (e) => {
     return (
         <div className="px-16 bg-gray-200 py-8">
             <h1 className="font-varela font-bold text-4xl mb-8">Contact</h1>
+            <h2>Email</h2>
+            <p>michaelbergerson@gmail.com</p>
             <form className="flex flex-col">
                 <label htmlFor="name">Name</label>
                 <input type="text" name="name" onChange={(e)=>{setName(e.target.value)}}/>
