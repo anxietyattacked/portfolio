@@ -22,8 +22,9 @@ export const projectData = [
         image:"images/Markalytics.png",
         info:"Markalytics is a website and blog for a marketing and analytics company built in React. It features a video background for desktops, hamburger menu for mobile, a working contact form, and a paginated blog with articles.",
         tech:"React",
-        ghLink:"https://dazzling-chandrasekhar-be3f8e.netlify.app/",
-        Link:"https://github.com/anxietyattacked/Markalytics"
+        ghLink:"https://github.com/anxietyattacked/Markalytics",
+        Link: "https://dazzling-chandrasekhar-be3f8e.netlify.app/"
+        
 
     }
 ]

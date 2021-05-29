@@ -3,11 +3,25 @@ import React, {useState} from 'react'
 
 const Contact = () => {
 const [name, setName] = useState('')
+const [nameError, setNameError] = useState(false)
 const [email, setEmail] = useState('')
+const [emailError, setEmailError] = useState(false)
 const [message, setMessage] = useState('')
+const [messageError, setMessageError] = useState(false)
 const [submitted, setSubmitted] = useState(false)
 
 const handleSubmit = (e) => { 
+  if(name === ""){
+  setNameError(true)
+  return
+  }
+  else if(email === ""){
+    setEmailError(true)
+    return
+  }else if(message === ''){
+    setMessageError(true)
+    return
+  }
     e.preventDefault()
     console.log('Sending')
   let data = {
@@ -29,26 +43,33 @@ const handleSubmit = (e) => {
           setSubmitted(true)
           setName('')
           setEmail('')
-          setBody('')
+          setMessage('')
+          setNameError(false)
+          setEmailError(false)
+          setMessageError(false)
         }
       })
   }
     return (
         <div className="px-16 bg-gray-200 py-8">
             <h1 className="font-varela font-bold text-4xl mb-8">Contact</h1>
-            <h2>Email</h2>
+            {submitted ? <h1 className="text-center text-green-500 text-xl font-varela font-bold">Message Sent</h1> : null}
+            <h2><strong>Email</strong></h2>
             <p>michaelbergerson@gmail.com</p>
-            <form className="flex flex-col">
+            <form className="flex flex-col mt-8">
+                {nameError ? <p className="font-roboto text-red-500">Name Required</p> : null}
+                
                 <label htmlFor="name">Name</label>
-                <input type="text" name="name" onChange={(e)=>{setName(e.target.value)}}/>
+                <input type="text" name="name" onChange={(e)=>{setName(e.target.value)}} required/>
+                {emailError ? <p className="font-roboto text-red-500">Email Required</p> : null}
                 <label htmlFor="email">Email</label>
-                <input className="mb-8" type="email" name="email" onChange={(e)=>{setEmail(e.target.value)}}/>
+                <input className="mb-8" type="email" name="email" onChange={(e)=>{setEmail(e.target.value)}} required/>
+                {messageError ? <p className="font-roboto text-red-500">Message Required</p> : null}
                 <label htmlFor="message">Message</label>
-                <textarea className="" name="message" id="" cols="20" rows="10" onChange={(e)=>{setMessage(e.target.value)}}></textarea>
+                <textarea className="" name="message" id="" cols="20" rows="10" onChange={(e)=>{setMessage(e.target.value)}} required></textarea>
                 <div className="flex justify-center mt-8">
-                <button className="px-6 py-3 bg-black text-white border-grad text-xl md:text-2xl w-1/2" 
+                <button className="px-6 py-3 bg-black font-varela text-white border-grad text-xl md:text-2xl w-1/2" 
                 onClick={(e) => {handleSubmit(e)}}
-                // onClick={() => console.log({name, email, message})}
                 >Send</button>
                 </div>
                 
