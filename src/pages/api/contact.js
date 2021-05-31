@@ -26,6 +26,7 @@ export default async function handler(req, res) {
   
         const transport = nodemailer.createTransport({
         service: 'gmail',
+        secure:true,
         tls: {
           ciphers : 'SSLv3',
         },
