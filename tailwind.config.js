@@ -1,5 +1,4 @@
 module.exports = {
-  // mode:"jit",
   purge: ['./pages/index.js', "./components/*.js"], //'./pages/index.js', "./components/*.js"
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -9,10 +8,9 @@ module.exports = {
       },
       colors: {
         hero: {
-          // theme('colors.indigo.light')
           alt: '#e400f8',
   
-          // theme('colors.indigo.DEFAULT')
+      
           DEFAULT: '#02c6f0',
         },
       },
