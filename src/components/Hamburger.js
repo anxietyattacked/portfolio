@@ -20,13 +20,14 @@ const Hamburger = ({isOpen, setIsOpen}) => {
   
     return (
       <>
-      <div className="inset-0 flex col-start-5 col-end-6 place-self-end">
+      <div className="inset-0 col-start-5 col-end-5 place-self-end">
         <button
+          aria-label="open menu"
           type="button"
           onClick={openModal}
-          className=" mr-2 py-2 text-xl"
+          className="mr-16 sm:mr-0 sm:ml-2 md:ml-2 py-2 text-xl"
         >
-         <span className="iconify text-5xl text-white" data-icon="cil-hamburger-menu" data-inline="false"></span>
+         <span className="iconify text-5xl text-white fixed mr-8 z-30 mix-blend-difference" data-icon="cil-hamburger-menu" data-inline="false"></span>
         </button>
       </div>
         <Transition show={isOpen} as={Fragment}>
@@ -70,25 +71,28 @@ const Hamburger = ({isOpen, setIsOpen}) => {
                 <div className="absolute left-0 top-0 right-0 inline-block w-7/12 h-screen overflow-hidden text-left transition-all transform bg-black shadow-xl">
                   <div className="grid place-content-end">
                     <button
+                      aria-label="close menu"
                       type="button"
                       className="inline-flex justify-end px-4 py-2  font-bold text-white bg-black border border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
                       onClick={() => {
                           closeModal()
                       }}
                     >
-                    <span className="iconify text-2xl font-bold" data-icon="codicon-chrome-close" data-inline="false"></span>
+                    <span className="iconify text-4xl font-bold" data-icon="codicon-chrome-close" data-inline="false"></span>
                     </button>
                   </div>
                   <nav className="flex flex-col md:fixed md:overscroll-x-none md:h-full w-full md:w-1/6 z-10 px-4 md:bg-black">
-          <Link href="/"><a className="text-3xl md:text-3xl lg:text-4xl text-white lg:ml-4 md:ml-1">Home</a></Link>
-          <Link href="/"><a className="text-3xl md:text-3xl lg:text-4xl text-white lg:ml-4 md:ml-1">Resume</a></Link>
-          <Link href="/"><a className="text-3xl md:text-3xl lg:text-4xl text-white lg:ml-4 md:ml-1">Contact</a></Link>
-          <div className="flex justify-center spacing-x-8 lg:ml-2 md:mt-4 lg:mt-5">
-          <a href="https://www.linkedin.com/in/michael-bergerson-375036108/"><span className="iconify md:mr-2 lg:mr-2  text-3xl md:text-2xl lg:text-4xl text-white" data-icon="brandico-linkedin-rect" data-inline="false"></span></a>
-          <a href="https://github.com/anxietyattacked"><span className="iconify md:mr-2 lg:mr-2 text-3xl text-white" data-icon="akar-icons:github-fill" data-inline="false"></span></a>
-          <button>
-          <span class="iconify   text-3xl text-white" data-icon="ant-design:mail-outlined" data-inline="false"></span>
-          </button>
+          <a href="#home" className="font-varela text-3xl md:text-3xl lg:text-4xl text-white lg:ml-4 md:ml-1">Home</a>
+          <a href="/data/MichaelBergerson-Resume.pdf" className="font-varela text-3xl md:text-3xl lg:text-4xl text-white lg:ml-4 md:ml-1">Resume</a>
+          <a href="#about" className="font-varela text-3xl md:text-3xl lg:text-4xl text-white lg:ml-4 md:ml-1">About</a>
+          <a href="#skills" className="font-varela text-3xl md:text-3xl lg:text-4xl text-white lg:ml-4 md:ml-1">Skills</a>
+          <a href="#projects" className="font-varela text-3xl md:text-3xl lg:text-4xl text-white lg:ml-4 md:ml-1">Projects</a>
+          <a href="#contact" className="font-varela text-3xl md:text-3xl lg:text-4xl text-white lg:ml-4 md:ml-1">Contact</a>
+          <div className="flex mt-4 lg:ml-2 md:mt-4 lg:mt-5">
+          <a href="https://www.linkedin.com/in/michael-bergerson-375036108/"><span className="iconify mr-3 md:mr-2 lg:mr-2  text-3xl md:text-2xl lg:text-4xl text-white" data-icon="brandico-linkedin-rect" data-inline="false"></span></a>
+          <a href="https://github.com/anxietyattacked"><span className="iconify mr-3 md:mr-2 lg:mr-2 text-3xl text-white" data-icon="akar-icons:github-fill" data-inline="false"></span></a>
+  
+          <a href="mailto:michaelbergerson@gmail.com"><span class="iconify mr-3 text-3xl text-white" data-icon="ant-design:mail-outlined" data-inline="false"></span></a>
           </div>
         </nav>
                   

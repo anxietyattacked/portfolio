@@ -13,7 +13,7 @@ export const projectData = [
         name:"HoopyDo",
         image:"images/HoopyDo.png",
         info:"HoopyDo is an NBA statistics and shot chart explorer built in React, Tailwind, and D3. The data is from nba_api and I used Pythons’ Pandas library to manipulate the data. Users can select a player and see their season totals, shot charts and stats by game.",
-        tech:"React, D3,Tailwind React Table, data from nba_api, Python, Pandas",
+        tech:"React, D3, Tailwind, React Table, data from nba_api, Python, Pandas",
         ghLink:"https://github.com/anxiety,attacked/NBA-Stats-Dashboard",
         Link:"https://naughty-neumann-fb4b06.netlify.app/"
     },

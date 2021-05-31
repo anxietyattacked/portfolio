@@ -15,7 +15,7 @@ export default function Home() {
   const window = useWindowDimensions()
   let [isOpen, setIsOpen] = useState(false);
   let isMobile = (window.width <= 768)
-  console.log(process.env.USERNAME)
+
   return (
     <div className="">
       <Head>

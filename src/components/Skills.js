@@ -2,9 +2,9 @@ import React from 'react'
 
 const Skills = () => {
     return (
-        <div className=" grid grid-cols-5 bg-gray-200 py-8 px-8 md:px-16">
+        <section id="skills" className=" grid grid-cols-5 bg-gray-200 py-8 px-4 md:px-16">
         <h1 className="col-span-5 font-varela font-bold text-4xl mb-8">Skills</h1>
-        <div className="col-span-5 grid grid-cols-3 md:grid-cols-4 gap-8 place-content-center place-items-center border-grad py-8">
+        <div className="col-span-5 grid grid-cols-3 md:grid-cols-4 gap-8 place-content-center place-items-center border-grad py-8 px-4">
           <div className="">
           <span className="iconify text-5xl md:text-6xl ml-3 md:ml-2" data-icon="grommet-icons:js" data-inline="false"></span>
           <p>Javascript</p>
@@ -57,7 +57,7 @@ const Skills = () => {
 
         </div>
    
-      </div>
+      </section>
     )
 }
 
