@@ -20,5 +20,3 @@ const Hero = ({isOpen, setIsOpen, isMobile}) => {
 }
 
 export default Hero
-// className="col-start-4 col-end-5 fixed"
-// className="grid grid-cols-5 col-span-5"
