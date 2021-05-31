@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ['./pages/*.js', "./components/*.js"], //'./pages/index.js', "./components/*.js"
+  purge: ['./src/pages/index.js', "./src/components/*.js"], //'./pages/index.js', "./components/*.js"
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -8,6 +8,7 @@ module.exports = {
       },
       colors: {
         hero: {
+
           alt: '#e400f8',
   
       
