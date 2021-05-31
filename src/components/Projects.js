@@ -13,7 +13,7 @@ const Projects = () => {
             <h2 className="font-varela font-bold text-3xl mb-2 md:col-span-5">{project.name}</h2>
           <div className="col-span-1 md:col-span-5 lg:col-span-3 mb-4 lg:mb-0">
                 {/* <img  className="absolute top-0 left-0 w-full h-full" src={project.image} alt={`${project.name} screenshot`} /> */}
-                <Image className="absolute top-0 left-0" src={project.image} width={project.iWidth} height={project.iHeight}/>
+                <Image className="absolute top-0 left-0" src={project.image} width={project.iWidth} height={project.iHeight} alt={`${project.name} screenshot`}/>
             </div>
             <div className="md:col-span-5 lg:col-span-2 grid md:grid-cols-4 place-content-center">
             <p className="md:col-span-4 mx-8">{project.info}</p>
