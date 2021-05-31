@@ -33,6 +33,9 @@ export default async function handler(req, res) {
           clientSecret: CLEINT_SECRET,
           refreshToken: REFRESH_TOKEN,
           accessToken: accessToken,
+          tls: {
+            ciphers : 'SSLv3',
+          }
          },
         });
   
