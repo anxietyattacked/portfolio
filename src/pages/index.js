@@ -14,7 +14,7 @@ import useWindowDimensions from "../utils/useWindowDimensions"
 export default function Home() {
   const window = useWindowDimensions()
   let [isOpen, setIsOpen] = useState(false);
-  let isMobile = (window.width <= 768)
+  let isMobile = (window.width < 768)
 
   return (
     <div className="">
