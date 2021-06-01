@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   const EMAIL_TO = process.env.EMAIL_TO
   
 
-
+let test = false
   const oAuth2Client = new google.auth.OAuth2(
     CLIENT_ID,
     CLEINT_SECRET,
@@ -57,10 +57,7 @@ export default async function handler(req, res) {
   }
   
     
-    return sendMail().then((result) => {console.log(result)
-      res.status(200).json({ msg: "Works"})}).catch((error) =>console.log(error.message));
 
-
-    // return sendMail().then((result) => res.status(200).json({ msg: "Works"})).catch((error) =>console.log(error.message));
+    return await sendMail().then((result) => res.status(200).json({ msg: "Works"})).catch((error) =>console.log(error.message));
 
   }
