@@ -10,7 +10,7 @@ const [message, setMessage] = useState('')
 const [messageError, setMessageError] = useState(false)
 const [submitted, setSubmitted] = useState(false)
 
-const handleSubmit = (e) => { 
+const  handleSubmit = async (e) => { 
   if(name === ""){
   setNameError(true)
   return
@@ -29,7 +29,7 @@ const handleSubmit = (e) => {
       email,
       message
     }
-    fetch('/api/contact', {
+    await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Accept': 'application/json, text/plain, */*',
