@@ -29,7 +29,7 @@ const  handleSubmit = async (e) => {
       email,
       message
     }
-    await fetch('/api/contact', {
+    fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Accept': 'application/json, text/plain, */*',

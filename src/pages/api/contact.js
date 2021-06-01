@@ -1,8 +1,10 @@
-export default async function handler(req, res) {
-  const nodemailer = require('nodemailer');
-  const { google } = require('googleapis');
-  require('dotenv').config()
+const nodemailer = require('nodemailer');
+const { google } = require('googleapis');
 
+
+export default async function handler(req, res) {
+
+  
   // These id's and secrets should come from .env file.
   const CLIENT_ID = process.env.EMAIL_CLIENT_ID
   const CLEINT_SECRET = process.env.EMAIL_CLIENT_SECRET
