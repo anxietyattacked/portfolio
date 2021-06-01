@@ -10,34 +10,32 @@ const [message, setMessage] = useState('')
 const [messageError, setMessageError] = useState(false)
 const [submitted, setSubmitted] = useState(false)
 
-const  handleSubmit = async (e) => { 
+async function handleOnSubmit(e) {
   if(name === ""){
-  setNameError(true)
-  return
-  }
-  else if(email === ""){
-    setEmailError(true)
-    return
-  }else if(message === ''){
-    setMessageError(true)
-    return
-  }
-    e.preventDefault()
-    console.log('Sending')
-  let data = {
-      name,
-      email,
-      message
-    }
-    fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json, text/plain, */*',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      }).then((res) => {
-        console.log('Response received')
+      setNameError(true)
+      return
+      }
+      else if(email === ""){
+        setEmailError(true)
+        return
+      }else if(message === ''){
+        setMessageError(true)
+        return
+      }
+  e.preventDefault();
+
+  const formData = {};
+
+  Array.from(e.currentTarget.elements).forEach(field => {
+    if ( !field.name ) return;
+    formData[field.name] = field.value;
+  });
+
+  await fetch('/api/mail', {
+    method: 'POST',
+    body: JSON.stringify(formData)
+  }).then((res) => {
+    console.log('Response received')
         if (res.status === 200) {
           console.log('Response succeeded!')
           setSubmitted(true)
@@ -47,16 +45,55 @@ const  handleSubmit = async (e) => {
           setNameError(false)
           setEmailError(false)
           setMessageError(false)
-        }
-      })
-  }
+  }});
+}
+// const  handleSubmit = async (e) => { 
+//   if(name === ""){
+//   setNameError(true)
+//   return
+//   }
+//   else if(email === ""){
+//     setEmailError(true)
+//     return
+//   }else if(message === ''){
+//     setMessageError(true)
+//     return
+//   }
+//     e.preventDefault()
+//     console.log('Sending')
+//   let data = {
+//       name,
+//       email,
+//       message
+//     }
+//     fetch('/api/contact', {
+//         method: 'POST',
+//         headers: {
+//           'Accept': 'application/json, text/plain, */*',
+//           'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(data)
+//       }).then((res) => {
+//         console.log('Response received')
+//         if (res.status === 200) {
+//           console.log('Response succeeded!')
+//           setSubmitted(true)
+//           setName('')
+//           setEmail('')
+//           setMessage('')
+//           setNameError(false)
+//           setEmailError(false)
+//           setMessageError(false)
+//         }
+//       })
+//   }
     return (
         <section id="contact" className="px-16 bg-gray-200 py-8">
             <h1 className="font-varela font-bold text-4xl mb-8">Contact</h1>
             {submitted ? <h1 className="text-center text-green-500 text-xl font-varela font-bold">Message Sent</h1> : null}
             <h2><strong>Email</strong></h2>
             <p>michaelbergerson@gmail.com</p>
-            <form className="flex flex-col mt-8">
+            <form onSubmit={handleOnSubmit} className="flex flex-col mt-8">
               <div className="flex flex-col">
                 {nameError ? <p className="font-roboto text-red-500">Name Required</p> : null}
                 <label className="font-roboto" htmlFor="name">Name</label>
@@ -75,7 +112,7 @@ const  handleSubmit = async (e) => {
                 <div className="flex justify-center mt-8">
                 <button className="px-6 py-3 bg-black font-varela text-white border-grad text-xl md:text-2xl w-full md:w-1/2" 
                 aria-label="send message"
-                onClick={(e) => {handleSubmit(e)}}
+                type="submit"
                 >Send</button>
                 </div>
                 
