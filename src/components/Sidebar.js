@@ -18,7 +18,7 @@ const Sidebar = () => {
           <a href="#projects"  className="font-varela sm:text-2xl md:text-2xl lg:text-4xl text-white lg:ml-2 xl:ml-4 md:ml-1">Projects</a>
           <a href="#contact"  className="font-varela sm:text-2xl md:text-2xl lg:text-4xl text-white lg:ml-2 xl:ml-4 md:ml-1">Contact</a>
           <div className="flex justify-center spacing-x-8 lg:ml-2 md:mt-4 lg:mt-5">
-          <a href="https://www.linkedin.com/in/michael-bergerson-375036108/"><span className="iconify md:mr-2 lg:mr-2  sm:text-2xl md:text-2xl lg:text-4xl text-white" data-icon="brandico-linkedin-rect" data-inline="false"></span></a>
+          <a href="https://www.linkedin.com/in/michaelbergerson/"><span className="iconify md:mr-2 lg:mr-2  sm:text-2xl md:text-2xl lg:text-4xl text-white" data-icon="brandico-linkedin-rect" data-inline="false"></span></a>
           <a href="https://github.com/anxietyattacked"><span className="iconify md:mr-2 lg:mr-2 sm:text-2xl md:text-2xl lg:text-4xl text-white" data-icon="akar-icons:github-fill" data-inline="false"></span></a>
           <a href="mailto:michaelbergerson@gmail.com"><span className="iconify lg:text-4xl md:text-2xl sm:text-2xl text-white" data-icon="ant-design:mail-outlined" data-inline="false"></span></a>
      

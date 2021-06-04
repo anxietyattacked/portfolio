@@ -89,7 +89,7 @@ const Hamburger = ({isOpen, setIsOpen}) => {
           <a href="#projects" className="font-varela text-3xl md:text-3xl lg:text-4xl text-white lg:ml-4 md:ml-1">Projects</a>
           <a href="#contact" className="font-varela text-3xl md:text-3xl lg:text-4xl text-white lg:ml-4 md:ml-1">Contact</a>
           <div className="flex mt-4 lg:ml-2 md:mt-4 lg:mt-5">
-          <a href="https://www.linkedin.com/in/michael-bergerson-375036108/"><span className="iconify mr-3 md:mr-2 lg:mr-2  text-3xl md:text-2xl lg:text-4xl text-white" data-icon="brandico-linkedin-rect" data-inline="false"></span></a>
+          <a href="https://www.linkedin.com/in/michaelbergerson/"><span className="iconify mr-3 md:mr-2 lg:mr-2  text-3xl md:text-2xl lg:text-4xl text-white" data-icon="brandico-linkedin-rect" data-inline="false"></span></a>
           <a href="https://github.com/anxietyattacked"><span className="iconify mr-3 md:mr-2 lg:mr-2 text-3xl text-white" data-icon="akar-icons:github-fill" data-inline="false"></span></a>
   
           <a href="mailto:michaelbergerson@gmail.com"><span class="iconify mr-3 text-3xl text-white" data-icon="ant-design:mail-outlined" data-inline="false"></span></a>
