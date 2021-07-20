@@ -15,8 +15,8 @@ const Sidebar = () => {
 
             <h1 className="mt-4 font-varela md:text-2xl text-center text-white">Michael</h1>
             <h1 className="font-varela md:text-2xl text-center text-white">Bergerson</h1>
-            <div>
-            <Image src="/Frame2.svg" width="250" height="189.7697"></Image>
+            <div className="grid place-content-center">
+            <Image className="" src="/images/Frame2.svg" width="200" height="200"></Image>
             </div>
          <a href="#home" className="font-varela sm:text-2xl md:text-2xl lg:text-4xl text-white mt-1 lg:ml-2 xl:ml-4 md:ml-1">Home</a>
           <a href="/data/MichaelBergerson-Resume.pdf" className="font-varela sm:text-2xl md:text-2xl lg:text-4xl text-white llg:ml-2 xl:ml-4  md:ml-1">Resume</a>
