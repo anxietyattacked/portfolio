@@ -5,7 +5,7 @@ import {projectData} from "../data/projectInfo"
 
 const Projects = () => {
     return (
-        <section id="projects" className="grid gap-3 bg-gray-100 px-8 md:px-16 py-8">
+        <section id="projects" className="grid gap-3 bg-gray-200 px-8 md:px-16 py-8">
         <h1 className="font-varela font-bold text-4xl mb-5">Projects</h1>
         {projectData.map(project => (
             <div key={project.name} className="grid md:grid-cols-5 justify-center mb-8">

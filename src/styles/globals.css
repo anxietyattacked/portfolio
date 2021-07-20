@@ -55,7 +55,7 @@ background-clip: text;
 background-size: 400%;
 background-position: -100%;
 background-repeat: repeat;
-animation: grad-text-animation-rev 4s infinite linear alternate-reverse;
+animation: grad-text-animation-rev 6s infinite linear alternate-reverse;
 
 cursor: pointer;
 }

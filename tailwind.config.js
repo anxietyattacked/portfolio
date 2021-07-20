@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       margin:{
-        "sidebar":"16.666667%"
+        "sidebar":"20%"
       },
       colors: {
         hero: {

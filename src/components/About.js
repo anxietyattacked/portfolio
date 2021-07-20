@@ -3,10 +3,10 @@ import React from 'react'
 const About = () => {
     return (
       
-        <section id="about" className="pb-20 bg-gray-100 py-8 px-8 md:px-16 py-4 grid md:grid-cols-2">
+        <section id="about" className="pb-20 bg-gray-200 py-8 px-8 md:px-16 py-4 grid md:grid-cols-2">
           <h1 className="text-4xl font-bold font-varela mb-6 md:col-span-2">About</h1>
           <div className="md:col-span-2 mb-4">
-            <p className="text-xl border-grad bg-black text-white py-8 px-4 md:px-8 lg:px-16 rounded-2xl">My name is Michael Bergerson. I am a frontend web developer with a passion for learning from Olympia, WA. I specialize in JavaScript and have experience with React, Typescript, D3 and Tailwind. I also have experience working with Python and Pandas. Take a look at my work and get in touch! </p>
+            <p className="text-xl border-grad bg-black text-white py-8 px-4 md:px-8 lg:px-16 rounded-2xl">My name is Michael Bergerson. I am a full stack web developer with a passion for learning. I specialize React, JavaScript Typescript, Node, GraphQL, and D3. I also have some experience in data science using Python and Pandas. Take a look at my work and get in touch! </p>
           </div>
           <div className="md:col-span-2 grid grid-cols-3 place-content-center mt-8">
             <h1 className="font-varela text-4xl font-bold col-span-3 mb-8">Hobbies</h1>

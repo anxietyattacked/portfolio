@@ -17,6 +17,7 @@ export default function Home() {
   let [isOpen, setIsOpen] = useState(false);
   let isMobile = (window.width < 768)
 
+
   return (
     <div className="">
       <Head>

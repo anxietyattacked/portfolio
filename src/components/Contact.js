@@ -47,48 +47,9 @@ async function handleOnSubmit(e) {
           setMessageError(false)
   }});
 }
-// const  handleSubmit = async (e) => { 
-//   if(name === ""){
-//   setNameError(true)
-//   return
-//   }
-//   else if(email === ""){
-//     setEmailError(true)
-//     return
-//   }else if(message === ''){
-//     setMessageError(true)
-//     return
-//   }
-//     e.preventDefault()
-//     console.log('Sending')
-//   let data = {
-//       name,
-//       email,
-//       message
-//     }
-//     fetch('/api/contact', {
-//         method: 'POST',
-//         headers: {
-//           'Accept': 'application/json, text/plain, */*',
-//           'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify(data)
-//       }).then((res) => {
-//         console.log('Response received')
-//         if (res.status === 200) {
-//           console.log('Response succeeded!')
-//           setSubmitted(true)
-//           setName('')
-//           setEmail('')
-//           setMessage('')
-//           setNameError(false)
-//           setEmailError(false)
-//           setMessageError(false)
-//         }
-//       })
-//   }
+
     return (
-        <section id="contact" className="px-16 bg-gray-200 py-8">
+        <section id="contact" className="px-16 bg-gray-300 py-8">
             <h1 className="font-varela font-bold text-4xl mb-8">Contact</h1>
             {submitted ? <h1 className="text-center text-green-500 text-xl font-varela font-bold">Message Sent</h1> : null}
             <h2><strong>Email</strong></h2>

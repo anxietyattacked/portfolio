@@ -1,7 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment, useRef} from "react";
 import {useRouter} from "next/router"
-import Link from "next/link"
+
 
 
 
@@ -25,9 +25,9 @@ const Hamburger = ({isOpen, setIsOpen}) => {
           aria-label="open menu"
           type="button"
           onClick={openModal}
-          className="mr-16 sm:mr-0 sm:ml-2 md:ml-2 py-2 text-xl"
+          className="mr-16  py-2 text-xl"
         >
-         <span className="iconify text-5xl text-white fixed mr-8 z-30 mix-blend-difference" data-icon="cil-hamburger-menu" data-inline="false"></span>
+         <span className="iconify text-5xl text-white fixed  z-30" data-icon="cil-hamburger-menu" data-inline="false"></span>
         </button>
       </div>
         <Transition show={isOpen} as={Fragment}>
@@ -68,12 +68,12 @@ const Hamburger = ({isOpen, setIsOpen}) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <div className="absolute left-0 top-0 right-0 inline-block w-7/12 h-screen overflow-hidden text-left transition-all transform bg-black shadow-xl">
+                <div className="absolute left-0 top-0 right-0 inline-block w-7/12 h-screen overflow-hidden text-left transition-all transform bg-gray-600 shadow-xl">
                   <div className="grid place-content-end">
                     <button
                       aria-label="close menu"
                       type="button"
-                      className="inline-flex justify-end px-4 py-2  font-bold text-white bg-black border border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+                      className="inline-flex justify-end px-4 py-2  font-bold text-white bg-gray-600 border border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
                       onClick={() => {
                           closeModal()
                       }}
@@ -82,6 +82,8 @@ const Hamburger = ({isOpen, setIsOpen}) => {
                     </button>
                   </div>
                   <nav className="flex flex-col md:fixed md:overscroll-x-none md:h-full w-full md:w-1/6 z-10 px-4 md:bg-black">
+                  <h1 className="mt-4 font-varela text-2xl text-center text-white">Michael</h1>
+            <h1 className="font-varela text-2xl text-center text-white mb-3">Bergerson</h1>
           <a href="#home" className="font-varela text-3xl md:text-3xl lg:text-4xl text-white lg:ml-4 md:ml-1">Home</a>
           <a href="/data/MichaelBergerson-Resume.pdf" className="font-varela text-3xl md:text-3xl lg:text-4xl text-white lg:ml-4 md:ml-1">Resume</a>
           <a href="#about" className="font-varela text-3xl md:text-3xl lg:text-4xl text-white lg:ml-4 md:ml-1">About</a>
