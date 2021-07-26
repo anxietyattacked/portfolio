@@ -6,7 +6,7 @@ const Hero = ({ isOpen, setIsOpen, isMobile }) => {
   return (
     <section
       id="home"
-      className=" bg-hero-pattern h-screen w-full bg-bottom bg-no-repeat"
+      className="bg-hero-pattern h-screen w-full bg-bottom bg-no-repeat"
     >
       <div className="grid grid-cols-5 place-content-end">
         {isMobile ? (
