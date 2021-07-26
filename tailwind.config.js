@@ -1,31 +1,32 @@
 module.exports = {
-  purge: ['./src/pages/index.js', "./src/components/*.js"], //'./pages/index.js', "./components/*.js"
+  purge: ["./src/pages/index.js", "./src/components/*.js"], //'./pages/index.js', "./components/*.js"
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      margin:{
-        "sidebar":"20%"
+      margin: {
+        sidebar: "20%",
       },
       colors: {
         hero: {
+          alt: "#e400f8",
 
-          alt: '#e400f8',
-  
-      
-          DEFAULT: '#02c6f0',
+          DEFAULT: "#02c6f0",
         },
       },
       fontFamily: {
-        'varela': ['"Varela Round"', 'sans-serif'],
-        'roboto': ['"Roboto"', 'sans-serif']
+        varela: ['"Varela Round"', "sans-serif"],
+        roboto: ['"Roboto"', "sans-serif"],
       },
-      backgroundImage: theme => ({
-        'hero-pattern': "url('/images/2.jpg')",
-       })
+      backgroundImage: (theme) => ({
+        "hero-pattern": "url('/images/2.jpg')",
+      }),
+      zIndex: {
+        "-10": "-10",
+      },
     },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
